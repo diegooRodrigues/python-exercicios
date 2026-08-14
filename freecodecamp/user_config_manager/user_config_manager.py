@@ -96,3 +96,12 @@ def view_settings(dic):
 test_settings = {
     "theme": "dark"
 }
+
+print(view_settings(test_settings))
+print(add_setting(test_settings, ("language", "portuguese")))
+print(update_setting(test_settings, ("theme", "light")))
+print()
+print(view_settings(test_settings))
+print(delete_setting(test_settings, "language"))
+print()
+print(view_settings(test_settings))
