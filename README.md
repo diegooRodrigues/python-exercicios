@@ -1,4 +1,4 @@
-# python-practice
+# python-exercicios
 
 Repositório com soluções e anotações de exercícios de Python resolvidos ao longo dos meus estudos, de diversas fontes
 
