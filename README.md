@@ -1,4 +1,4 @@
-# python-exercicios
+# 🐍 python-exercicios
 
 Repositório com soluções e anotações de exercícios de Python resolvidos ao longo dos meus estudos, de diversas fontes
 
@@ -11,9 +11,9 @@ Registrar meu progresso estudando Python, com o código de cada exercício, pequ
 - **`freecodecamp/`**: exercícios feitos na plataforma freeCodeCamp. O enunciado de cada exercício fica comentado no início do próprio `user_config_manager.py`, então não há arquivo de notas separado.
 
 ```
-python-exercises/
+python-exercicios/
 ├── README.md
-└── freeCodeCamp/
+└── freecodecamp/
     └── user_config_manager/
         └── user_config_manager.py
 ```
