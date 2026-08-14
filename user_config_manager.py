@@ -1,0 +1,98 @@
+"""
+Build a User Configuration Manager
+In this lab, you will build a User Configuration Manager that allows users to manage their settings such as theme, language, and notifications. You will implement functions to add, update, delete, and view user settings.
+
+Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
+
+User Stories:
+
+    1. You should define a function named add_setting with two parameters representing a dictionary of settings and a tuple containing a key-value pair
+
+    2. add_setting function should:
+
+        - Convert the key and value to lowercase.
+
+        - If the key setting exists, return Setting '[key]' already exists! Cannot add a new setting with this name.
+
+        - If the key setting doesn't exist, add the key-value pair to the given dictionary of settings and return Setting '[key]' added with value '[value]' successfully!.
+
+        - The messages returned should have the key and value in lowercase.
+
+    3. You should define a function named update_setting with two parameters representing a dictionary of settings and a tuple containing a key-value pair.
+
+    4. update_setting function should:
+
+        - Convert the key and value to lowercase.
+
+        - If the key setting exists, update its value in the given dictionary of settings and return: Setting '[key]' updated to '[value]' successfully!
+
+        - If the key setting doesn't exist, return Setting '[key]' does not exist! Cannot update a non-existing setting.
+
+        - The messages returned should have the key and value in lowercase.
+
+    5. You should define a function named delete_setting with two parameters representing a dictionary of settings and a key.
+
+    6. delete_setting function should:
+
+        - Convert the key passed to lowercase.
+
+        - If the key setting exists, remove the key-value pair from the given dictionary of settings and return Setting '[key]' deleted successfully!
+
+        - If the key setting does not exist, return Setting not found!
+
+        - The messages returned should have the key in lowercase.
+
+    7. You should define a function named view_settings with one parameter representing a dictionary of settings.
+
+    8. view_settings function should:
+
+        - Return No settings available. if the given dictionary of settings is empty.
+
+        - If the dictionary contains any settings, return a string displaying the settings. The string should start with Current User Settings: followed by the key-value pairs, each on a new line and with the key capitalized. For example, view_settings({'theme': 'dark', 'notifications': 'enabled', 'volume': 'high'}) should return:
+            Current User Settings:
+            Theme: dark
+            Notifications: enabled
+            Volume: high
+
+    9. For testing the code, you should create a dictionary named test_settings to store some user configuration preferences.
+"""
+
+def add_setting(dic, tup):
+    tup = tuple([word.lower() for word in tup])
+    if tup[0] in dic.keys():
+        return f"Setting '{tup[0]}' already exists! Cannot add a new setting with this name."
+    dic.update({tup[0]: tup[1]})
+    return f"Setting '{tup[0]}' added with value '{tup[1]}' successfully!"
+
+
+def update_setting(dic, tup):
+    tup = tuple([word.lower() for word in tup])
+    if tup[0] in dic.keys():
+        dic.update({tup[0]: tup[1]})
+        return f"Setting '{tup[0]}' updated to '{tup[1]}' successfully!"
+    return f"Setting '{tup[0]}' does not exist! Cannot update a non-existing setting."
+
+
+def delete_setting(dic, k):
+    k = k.lower()
+    if k in dic.keys():
+        dic.pop(k)
+        return f"Setting '{k}' deleted successfully!"
+    return "Setting not found!"
+
+
+def view_settings(dic):
+    if not dic:
+        return "No settings available."
+    
+    lines = ["Current User Settings:"]
+    
+    for key, value in dic.items():
+        lines.append(f"{key.capitalize()}: {value}")
+    
+    return "\n".join(lines) + "\n"
+
+
+test_settings = {
+    "theme": "dark"
+}
