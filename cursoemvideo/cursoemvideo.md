@@ -12,3 +12,5 @@ Cada pasta `desafioXXX/` contém:
 
 Para a lista completa com descrição de cada exercício, veja o 
 [índice no README principal](../README.md#cursoemvideo).
+
+**OBS:** os exercícios não foram feitos usando a biblioteca *rich* igual foi usado nos vídeos.
