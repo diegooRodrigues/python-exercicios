@@ -16,6 +16,7 @@ Registrar meu progresso estudando Python, com o código de cada exercício, pequ
 ```
 python-exercicios/
 ├── cursoemvideo/
+|   ├── cursoemvideo.md
 │   ├── desafio016/
 │   │   ├── __main__.py
 │   │   ├── classe.py
